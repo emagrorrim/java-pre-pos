@@ -19,8 +19,8 @@ public class PracticeATest {
     }
 
     @Test
-    public void create_update_elements_should_return_an_array_with_same_elements_in_two_collections() throws Exception {
-        //选出A集合中元素的key属性跟B对象中value属性中的元素相同的元素,把他们的count-1，输出减过之后的新A集合
+    public void create_update_collection_should_return_a_new_map_with_element_as_key_and_count_as_value() throws Exception {
+        //选出1集合中元素的key的值跟2对象中value属性中的元素相同的元素,把他们的count-1，输出减过之后的新集合
         Map<String, Integer> collection1 = new HashMap<String, Integer>() {{
             put("a", 2);
             put("e", 2);

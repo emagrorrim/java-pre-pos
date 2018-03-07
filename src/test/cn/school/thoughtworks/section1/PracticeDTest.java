@@ -20,6 +20,7 @@ public class PracticeDTest {
 
     @Test
     public void collect_same_elements_should_return_an_array_with_same_elements_in_two_collections() throws Exception {
+        //选出1集合中元素的key属性，跟2对象中value属性中的元素相同的元素
         Map<String,String> collection1 = new HashMap<String,String>(){{
             put("key","a");
             put("key","e");
