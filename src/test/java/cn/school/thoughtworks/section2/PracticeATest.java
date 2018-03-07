@@ -1,6 +1,5 @@
 package cn.school.thoughtworks.section2;
 
-import cn.school.thoughtworks.section2.PracticeA;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,7 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class PracticeATest {
