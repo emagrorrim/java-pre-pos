@@ -10,44 +10,44 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class PracticeATest {
-    private PracticeA practiceA = null;
+public class PracticeBTest {
+    private PracticeB practiceB = null;
 
     @Before
     public void setUp() throws Exception {
-        practiceA = new PracticeA();
+        practiceB = new PracticeB();
     }
 
     @Test
     public void create_update_elements_should_return_an_array_with_same_elements_in_two_collections() throws Exception {
-        //选出A集合中元素的key属性跟B对象中value属性中的元素相同的元素,把他们的count-1，输出减过之后的新A集合
+        //选出A集合中元素的key属性跟B对象中value属性中的元素相同的元素,把他们的count，满3减1，输出减过之后的新A集
         Map<String, Integer> collection1 = new HashMap<String, Integer>() {{
-            put("a", 2);
-            put("e", 2);
-            put("h", 2);
-            put("t", 2);
-            put("f", 2);
-            put("c", 2);
-            put("g", 2);
-            put("b", 2);
-            put("d", 2);
+            put("a", 3);
+            put("e", 7);
+            put("h", 11);
+            put("t", 20);
+            put("f", 9);
+            put("c", 8);
+            put("g", 7);
+            put("b", 6);
+            put("d", 5);
         }};
 
         List<String> list = Arrays.asList("a", "d", "e", "f");
         Map<String, List<String>> collection2 = new HashMap<>();
         collection2.put("value", list);
 
-        Map<String, Integer> result = practiceA.createUpdatedCollection(collection1, collection2);
+        Map<String, Integer> result = practiceB.createUpdatedCollection(collection1, collection2);
         Map<String, Integer> expectedResult = new HashMap<String, Integer>() {{
-            put("a", 1);
-            put("e", 1);
-            put("h", 2);
-            put("t", 2);
-            put("f", 1);
-            put("c", 2);
-            put("g", 2);
-            put("b", 2);
-            put("d", 1);
+            put("a", 2);
+            put("e", 5);
+            put("h", 11);
+            put("t", 20);
+            put("f", 6);
+            put("c", 8);
+            put("g", 7);
+            put("b", 6);
+            put("d", 4);
         }};
 
         assertEquals(result, expectedResult);
